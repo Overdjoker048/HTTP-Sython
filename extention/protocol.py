@@ -32,12 +32,12 @@ class UDP(threading.Thread):
                     if data is not None:
                         self.UDPsocket.sendto(data, (ip, port))
                         cf.info['request'] = int(cf.info['request'])+1
-            
+
             elif request.split(" ")[0] == "HEAD":
                 file = request.split(" ")[1]
                 data, error_code = apache.head(file)
                 self.UDPsocket.sendto(data, (ip, port))
-            
+
             elif request.split(" ")[0] == "HEAD":
                 self.UDPsocket.sendto(apache.head(), (ip, port))
 
@@ -80,7 +80,7 @@ class TCP(threading.Thread):
                         data, error_code = apache.head(file)
                         client.send(data)
                         print(data)
-                
+
                 elif request.split(" ")[0] == "OPTIONS":
                     data, error_code = apache.options()
                     client.send(data)
