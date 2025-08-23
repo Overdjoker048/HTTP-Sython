@@ -9,6 +9,7 @@ A lightweight and efficient HTTP server implementation in Python that supports b
 
 - Dual protocol support (TCP/UDP)
 - Multi-threaded request handling
+- Compatible with HTTP1.1 and HTTP2.0
 - Complete HTTP method support (GET, POST, PUT, DELETE, etc.)
 - File blacklisting capabilities
 - Automatic MIME type detection (150+ types supported)
